@@ -1,4 +1,4 @@
-# URL Shortner
+# URL Shortener
 
 A dead simple URL shortener implementation in Elixir
 
