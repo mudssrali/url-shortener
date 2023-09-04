@@ -58,7 +58,8 @@ defmodule Challenge.Server do
   end
 
   def handle_call({:get, short}, _from, state) do
-    {:reply, Map.get(state, short), state}
+    res = Map.get(state, short) || {:error, :url_not_found}
+    {:reply, res, state}
   end
 
   def handle_call(:count, _from, state) do
